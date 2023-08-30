@@ -37,14 +37,26 @@ Throughout this practice, I'll be covering various topics, including:
 This project includes a Dockerfile that allows you to easily set up and run the React application. Follow these steps to get started:
 1. Ensure you have Docker installed on your machine. You can download it from [here](https://www.docker.com/get-started).
 2. Clone this repository to your local machine: 
-``` sh
+```
 git clone https://github.com/your-username/react-practice.git
 cd react-practice
 ```
-1. Build and start the Docker containers using docker-compose:``` shdocker-compose up -d ```
-2. Once the containers are up, you can access a bash shell within the app container using the following command:``` shdocker-compose exec app bash ```
-3. Inside the container's shell, navigate to the React app's directory:``` shcd /linux-study/mslearn-react/code/0-starter/public ```
-4. Start the React development server:``` shnpm start ```
+1. Build and start the Docker containers using docker-compose:
+```
+docker-compose up -d
+```
+2. Once the containers are up, you can access a bash shell within the app container using the following command:
+```
+docker-compose exec app bash
+```
+3. Inside the container's shell, navigate to the React app's directory:
+```
+cd /linux-study/mslearn-react/code/0-starter/public
+```
+4. Start the React development server:
+```
+npm start
+```
 		
 You can now access the React app by visiting http://localhost:8080 in your browser.
 Please note that this Docker setup is intended for local development and learning purposes. If you encounter any issues or have questions, feel free to reach out or consult the Docker documentation.
