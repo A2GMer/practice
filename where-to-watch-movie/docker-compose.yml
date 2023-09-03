@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: 'wheretowatch'
+    tty: true
+    volumes:
+      - ./src:/opt/wheretowatch
+    working_dir: /opt/wheretowatch
+    ports:
+      - 8080:8080
+
