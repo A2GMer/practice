@@ -25,7 +25,9 @@ RUN apt update
 RUN apt install -y google-chrome-stable
 RUN pip install chromedriver-binary==116.0.5845.96.0
 # Install ChromeDriver
+RUN mkdir -p /opt/wheretowatch/chrome
+WORKDIR /opt/wheretowatch/chrome
 RUN curl -O https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_linux64.zip
-WORKDIR /opt/wheretowatch/src
 RUN unzip chromedriver_linux64.zip
 RUN apt install -y libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev
+RUN rm -rf chromedriver_linux64.zip
