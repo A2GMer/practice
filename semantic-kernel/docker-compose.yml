@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: ${PROJECT}
+    tty: true
+    volumes:
+      - ./src:/opt/${PROJECT}
+    working_dir: /opt/${PROJECT}
+#    ports:
+#      - 8080:8080
+
