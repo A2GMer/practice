@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: 'my-blockchain'
+    tty: true
+    volumes:
+      - ./src:/opt/my-blockchain
+    working_dir: /opt/my-blockchain
+#    ports:
+#      - 8080:8080
+
